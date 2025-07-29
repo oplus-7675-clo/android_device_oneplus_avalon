@@ -34,8 +34,6 @@ lib_fixups: lib_fixups_user_type = {
         'com.qti.sensor.s5k3p9',
         'libhwconfigurationutil',
         'libPanelChaplin',
-        'libpwirisfeature',
-        'libpwirishalwrapper',
         'vendor.display.color@1.0',
         'vendor.display.color@1.1',
         'vendor.display.color@1.2',
@@ -44,11 +42,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.oplus.hardware.camera_rfi-V1-ndk',
         'vendor.oplus.hardware.cammidasservice-V1-ndk',
         'vendor.oplus.hardware.displaycolorfeature-V1-ndk',
-        'vendor.pixelworks.hardware.display@1.0',
-        'vendor.pixelworks.hardware.display@1.1',
-        'vendor.pixelworks.hardware.display@1.2',
-        'vendor.pixelworks.hardware.feature@1.0',
-        'vendor.pixelworks.hardware.feature@1.1',
     ): lib_fixup_vendor_suffix,
 }
 
