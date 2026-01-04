@@ -22,12 +22,14 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2772
 TARGET_SCREEN_WIDTH := 1240
 
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947214369728643.xml
 
-# LiveDisplay
-$(call soong_config_set,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
+# Kernel
+KERNEL_PREBUILT_DIR := device/oneplus/avalon-kernel
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -50,13 +52,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Touch features
-$(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,ENABLE_GM,true)
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator.service.oplus-richtap
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
