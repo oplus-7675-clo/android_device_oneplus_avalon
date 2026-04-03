@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SCREEN_HEIGHT := 2772
 TARGET_SCREEN_WIDTH := 1240
 
@@ -26,12 +27,9 @@ TARGET_SCREEN_WIDTH := 1240
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947214369728643.xml
 
-# LiveDisplay
-$(call soong_config_set,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-custom
 
 PRODUCT_PACKAGES += \
     KeyHandlerResTarget \
@@ -51,13 +49,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Touch features
-$(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,ENABLE_GM,true)
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator.service.oplus-richtap
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
