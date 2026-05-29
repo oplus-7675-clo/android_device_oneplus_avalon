@@ -21,6 +21,7 @@ namespace_imports = [
     'hardware/oplus',
     'vendor/oneplus/sm8650-common',
     'vendor/qcom/opensource/commonsys-intf/display',
+    'vendor/qcom/common/vendor/adreno/u',
 ]
 
 
