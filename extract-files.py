@@ -39,8 +39,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.display.color@1.2',
         'vendor.display.color@1.3',
         'vendor.display.postproc@1.0',
-        'vendor.oplus.hardware.camera_rfi-V1-ndk',
-        'vendor.oplus.hardware.cammidasservice-V1-ndk',
         'vendor.oplus.hardware.displaycolorfeature-V1-ndk',
     ): lib_fixup_vendor_suffix,
 }
